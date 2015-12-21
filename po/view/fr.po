@@ -1,33 +1,33 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
+"Project-Id-Version: Textalk Webshop\n"
+"PO-Revision-Date: 2015-11-16 08:35+0100\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
+"Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 
 #: /tws-article-quantity/templates/twsArticleQuantity.html:4
 msgid "Quantity"
-msgstr ""
+msgstr "Quantité"
 
 #: /tws-article-quantity/templates/twsArticleQuantity.html:30
 msgid "This value doesn't have the right number of decimals."
-msgstr ""
+msgstr "Cette valeur n'a pas le bon nombre de décimales."
 
 #: /tws-article-quantity/templates/twsArticleQuantity.html:31
 msgid "This value is too small."
-msgstr ""
+msgstr "Cette valeur est trop petite."
 
 #: /tws-article-quantity/templates/twsArticleQuantity.html:32
 msgid "This value is too large."
-msgstr ""
+msgstr "Cette valeur est trop grande."
 
 #: /tws-article-quantity/templates/twsArticleQuantity.html:33
 msgid "This is required."
-msgstr ""
+msgstr "Cette valeur est obligatoire."
 
 #: /tws-article-quantity/templates/twsArticleQuantity.html:34
 msgid "Invalid value."
-msgstr ""
+msgstr "Valeur non valable."
