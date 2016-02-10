@@ -3,7 +3,7 @@ angular.module('twsArticleQuantity').directive('twsArticleQuantity',
   function(jed, ArticleService, $q, locale) {
   'use strict';
   return {
-    restrict: 'AE',
+    restrict: 'E',
     scope: {
       'articleUid': '=articleUid'
     },
