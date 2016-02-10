@@ -1,6 +1,6 @@
 <div ng-show="article.uid && originalSettings">
-  <div class="row">
-    <div class="form-group col-md-5"
+  <div class="row tws-article-quantity--input-row">
+    <div class="form-group col-md-5 tws-article-quantity--input-wrapper"
       ng-class="{'has-error': ngModel.$dirty && ngModel.$invalid, 'has-success': ngModel.$dirty && ngModel.$valid }">
       <label class="control-label">{{::gettext('Quantity')}}</label>
       <div class="input-group">
@@ -26,7 +26,7 @@
       </div>
     </div>
   </div>
-  <div class="row">
+  <div class="row tws-article-quantity--help-block">
     <div class="col-sm-12 help-block">
       <span ng-show="ngModel.$error.step">{{ ::gettext('This value doesn\'t have the right number of decimals.') }}</span>
       <span ng-show="ngModel.$error.min">{{ ::gettext('This value is too small.') }}</span>
