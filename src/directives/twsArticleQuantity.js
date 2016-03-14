@@ -49,13 +49,19 @@ angular.module('twsArticleQuantity').directive('twsArticleQuantity',
       });
 
       scope.undefinedToMin = (value) => {
-        if (!value) {
+        if (value === undefined) {
           value = scope.settings.minimum;
         }
         scope.model.quantity = value;
       };
 
       scope.inc = function() {
+        // big can't handle undefined
+        if (scope.model.quantity === undefined) {
+          scope.model.quantity = scope.settings.minimum;
+          return;
+        }
+
         var q = Big(scope.model.quantity); //jshint ignore:line
         q = q.plus(scope.divisibleBy);
 
@@ -67,6 +73,12 @@ angular.module('twsArticleQuantity').directive('twsArticleQuantity',
       };
 
       scope.dec = function() {
+        // big can't handle undefined
+        if (scope.model.quantity === undefined) {
+          scope.model.quantity = scope.settings.minimum;
+          return;
+        }
+
         var q = Big(scope.model.quantity); //jshint ignore:line
         q = q.minus(scope.divisibleBy);
 
