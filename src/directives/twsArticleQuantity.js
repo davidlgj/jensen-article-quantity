@@ -48,6 +48,13 @@ angular.module('twsArticleQuantity').directive('twsArticleQuantity',
         });
       });
 
+      scope.undefinedToMin = (value) => {
+        if (!value) {
+          value = scope.settings.minimum;
+        }
+        scope.model.quantity = value;
+      };
+
       scope.inc = function() {
         var q = Big(scope.model.quantity); //jshint ignore:line
         q = q.plus(scope.divisibleBy);
