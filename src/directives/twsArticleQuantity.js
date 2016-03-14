@@ -48,13 +48,6 @@ angular.module('twsArticleQuantity').directive('twsArticleQuantity',
         });
       });
 
-      scope.undefinedToMin = (value) => {
-        if (value === undefined) {
-          value = scope.settings.minimum;
-        }
-        scope.model.quantity = value;
-      };
-
       scope.inc = function() {
         // big can't handle undefined
         if (scope.model.quantity === undefined) {
