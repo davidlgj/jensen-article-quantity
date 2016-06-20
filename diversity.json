@@ -2,7 +2,7 @@
   "name": "tws-article-quantity",
   "title": "Article quantity",
   "description": "One the the article components, the quantity of it.",
-  "version": "1.1.5",
+  "version": "1.2.0",
   "angular": "twsArticleQuantity",
   "template": "component.mustache.html",
   "dependencies": {
