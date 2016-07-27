@@ -1,6 +1,7 @@
 angular.module('twsArticleQuantity').directive('twsArticleQuantity',
 ['twsApi.Jed', 'twsArticleService.ArticleService', '$q', 'twsApi.Locale',
-  function(jed, ArticleService, $q, locale) {
+ 'twsApi.Select', '$injector',
+  function(jed, ArticleService, $q, locale, sel, $injector) {
   'use strict';
   return {
     restrict: 'E',
@@ -13,6 +14,15 @@ angular.module('twsArticleQuantity').directive('twsArticleQuantity',
       // Isolated scope hides this from us.
       jed(scope, 'tws-article-quantity');
       scope.lang = locale.language();
+
+      const watchGlobal = sel(
+        'globalSettings.twsBuyButton.watchItemEnabled',
+        $injector.get('themeSettings')
+      );
+      scope.watchItemEnabled = false;
+      if (typeof watchGlobal === 'boolean') {
+        scope.watchItemEnabled = watchGlobal;
+      }
 
       scope.$watch('articleUid', function(value) {
         if (!value) { return; }

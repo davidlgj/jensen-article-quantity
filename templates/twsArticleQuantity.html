@@ -1,4 +1,4 @@
-<div ng-show="article.uid && originalSettings && !article.presentationOnly">
+<div ng-show="article.uid && originalSettings && !article.presentationOnly && (!watchItemEnabled || (watchItemEnabled && article.isBuyable))">
   <div class="row tws-article-quantity--input-row">
     <div class="form-group col-md-5 tws-article-quantity--input-wrapper"
       ng-class="{'has-error': ngModel.$dirty && ngModel.$invalid, 'has-success': ngModel.$dirty && ngModel.$valid }">
