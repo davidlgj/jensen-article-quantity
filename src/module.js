@@ -1,1 +1,1 @@
-angular.module('twsArticleQuantity', ['twsArticleService', 'twsApi']);
+angular.module('jensenArticleQuantity', ['twsArticleService', 'twsApi']);
