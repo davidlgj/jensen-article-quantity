@@ -3,7 +3,7 @@
   "title": "Article quantity",
   "description": "One the the article components, the quantity of it.",
   "version": "1.3.0",
-  "angular": "twsArticleQuantity",
+  "angular": "jensenArticleQuantity",
   "template": "component.mustache.html",
   "dependencies": {
     "tws-article-service": "^1.5.0",

@@ -3,7 +3,9 @@
     <div class="form-group col-md-5 tws-article-quantity--input-wrapper"
       ng-class="{'has-error': ngModel.$dirty && ngModel.$invalid, 'has-success': ngModel.$dirty && ngModel.$valid }">
       <label class="control-label">{{::gettext('Quantity')}}</label>
-      <div class="input-group">
+      <!-- HACK: Name of "unit" determines type of quantity selector -->
+      <!-- For now we only use a select or hide it since there is only 1 in stock
+      <div class="input-group" ng-if="article.unit.sv === 'st'">
         <span class="input-group-btn">
           <button class="btn btn-default"
                   ng-click="dec()"
@@ -23,6 +25,16 @@
                   ng-click="inc()"
                   type="button">+</button>
         </span>
+      </div>
+    -->
+      <div class="input-group" ng-if="article.unit.sv === '50 cm'">
+        <select type="number"
+               name="quantity"
+               class="form-control"
+               required
+               ng-options="o.value as o.name for o in quantityOptions"
+               ng-model="model.quantity">
+        </select>
       </div>
     </div>
   </div>

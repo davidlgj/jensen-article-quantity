@@ -1,4 +1,4 @@
-angular.module('twsArticleQuantity').directive('twsArticleQuantity',
+angular.module('jensenArticleQuantity').directive('jensenArticleQuantity',
 ['twsApi.Jed', 'twsArticleService.ArticleService', '$q', 'twsApi.Locale',
  'twsApi.Select', '$injector',
   function(jed, ArticleService, $q, locale, sel, $injector) {
@@ -8,7 +8,7 @@ angular.module('twsArticleQuantity').directive('twsArticleQuantity',
     scope: {
       'articleUid': '=articleUid'
     },
-    templateUrl: 'tws-article-quantity/templates/twsArticleQuantity.html',
+    templateUrl: 'jensen-article-quantity/templates/jensenArticleQuantity.html',
     link: function(scope, element, attrs) { //jshint ignore:line
 
       // Isolated scope hides this from us.
@@ -28,6 +28,7 @@ angular.module('twsArticleQuantity').directive('twsArticleQuantity',
         if (!value) { return; }
 
         ArticleService.update(scope.articleUid).then(function(articleData) {
+          console.warn(articleData)
           scope.article = articleData.article;
 
           if (scope.article.choiceSchema[scope.lang].properties !== undefined) {
@@ -54,6 +55,18 @@ angular.module('twsArticleQuantity').directive('twsArticleQuantity',
             // errors.
             // To fix this we use big.js, a smallish big number implementation.
             scope.divisibleBy = Big(scope.settings.divisibleBy); //jshint ignore:line
+
+
+            // JENSEN: Added quantity options
+            // They are hardcoded to 50 cm per unit of quantity
+            scope.quantityOptions = [];
+            const max = org.maximum || 1;
+            for (let i = 1; i <= max; i++) {
+              scope.quantityOptions.push({
+                name: `${i * 50} cm (Val ${i})`,
+                value: i,
+              });
+            }
           }
         });
       });
