@@ -28,7 +28,6 @@ angular.module('jensenArticleQuantity').directive('jensenArticleQuantity',
         if (!value) { return; }
 
         ArticleService.update(scope.articleUid).then(function(articleData) {
-          console.warn(articleData)
           scope.article = articleData.article;
 
           if (scope.article.choiceSchema[scope.lang].properties !== undefined) {
@@ -60,12 +59,16 @@ angular.module('jensenArticleQuantity').directive('jensenArticleQuantity',
             // JENSEN: Added quantity options
             // They are hardcoded to 50 cm per unit of quantity
             scope.quantityOptions = [];
-            const max = org.maximum || 1;
-            for (let i = 1; i <= max; i++) {
-              scope.quantityOptions.push({
-                name: `${i * 50} cm (Val ${i})`,
-                value: i,
-              });
+            const apiStockMessage = articleData.article.stock.message[scope.lang] || '';
+            const parsedStock = parseInt(apiStockMessage.replace(/[^\d]*/, ''), 10);
+            if (!isNaN(parsedStock)) {
+              // Hardcoded to 50 cm units
+              for (let i = 1; i <= parsedStock; i++) {
+                scope.quantityOptions.push({
+                  name: `${i * 50} cm  (Val ${i}) `,
+                  value: i,
+                });
+              }
             }
           }
         });
