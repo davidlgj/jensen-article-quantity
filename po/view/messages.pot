@@ -8,26 +8,26 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 
-#: /tws-article-quantity/templates/twsArticleQuantity.html:4
+#: /jensen-article-quantity/templates/jensenArticleQuantity.html:4
 msgid "Quantity"
 msgstr ""
 
-#: /tws-article-quantity/templates/twsArticleQuantity.html:30
+#: /jensen-article-quantity/templates/jensenArticleQuantity.html:42
 msgid "This value doesn't have the right number of decimals."
 msgstr ""
 
-#: /tws-article-quantity/templates/twsArticleQuantity.html:31
+#: /jensen-article-quantity/templates/jensenArticleQuantity.html:43
 msgid "This value is too small."
 msgstr ""
 
-#: /tws-article-quantity/templates/twsArticleQuantity.html:32
+#: /jensen-article-quantity/templates/jensenArticleQuantity.html:44
 msgid "This value is too large."
 msgstr ""
 
-#: /tws-article-quantity/templates/twsArticleQuantity.html:33
+#: /jensen-article-quantity/templates/jensenArticleQuantity.html:45
 msgid "This is required."
 msgstr ""
 
-#: /tws-article-quantity/templates/twsArticleQuantity.html:34
+#: /jensen-article-quantity/templates/jensenArticleQuantity.html:46
 msgid "Invalid value."
 msgstr ""
