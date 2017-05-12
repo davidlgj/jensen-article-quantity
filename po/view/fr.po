@@ -5,29 +5,29 @@ msgstr ""
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: /tws-article-quantity/templates/twsArticleQuantity.html:4
+#: /jensen-article-quantity/templates/jensenArticleQuantity.html:4
 msgid "Quantity"
 msgstr "Quantité"
 
-#: /tws-article-quantity/templates/twsArticleQuantity.html:30
+#: /jensen-article-quantity/templates/jensenArticleQuantity.html:42
 msgid "This value doesn't have the right number of decimals."
 msgstr "Cette valeur n'a pas le bon nombre de décimales."
 
-#: /tws-article-quantity/templates/twsArticleQuantity.html:31
+#: /jensen-article-quantity/templates/jensenArticleQuantity.html:43
 msgid "This value is too small."
 msgstr "Cette valeur est trop petite."
 
-#: /tws-article-quantity/templates/twsArticleQuantity.html:32
+#: /jensen-article-quantity/templates/jensenArticleQuantity.html:44
 msgid "This value is too large."
 msgstr "Cette valeur est trop grande."
 
-#: /tws-article-quantity/templates/twsArticleQuantity.html:33
+#: /jensen-article-quantity/templates/jensenArticleQuantity.html:45
 msgid "This is required."
 msgstr "Cette valeur est obligatoire."
 
-#: /tws-article-quantity/templates/twsArticleQuantity.html:34
+#: /jensen-article-quantity/templates/jensenArticleQuantity.html:46
 msgid "Invalid value."
 msgstr "Valeur non valable."
